@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --font-clr1: white;
+        --font-clr-mid: rgb(225, 225, 225);
+        --font-clr2: hsl(32, 8%, 70%);
+        --font-clr3: hsl(36, 5%, 30%);
+        --accent1: #0e7aafff;
+        --accent2: #3e72ff;
+        --raisin-black: #1a1b27ff;
+        --primary: #272837ff;
+        --secondary: rgb(53, 55, 76);
+      }
+      * {
+        font-family: space grotesk;
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        color: var(--accent2);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      body {
+        background-color: var(--primary);
+        color: var(--font-clr1);
+        padding: 100px;
+        background-color: var(--raisin-black);
+        display: flex;
+        justify-content:center ;
+        align-items: center;
+      }
+      div:nth-of-type(odd) {
+        background-color: var(--primary);
+      }
+      .container {
+        max-width: 800px;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        gap: 20px;
+
+        border: 2px solid var(--font-clr3);
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.9);
+      }
+      /* DIV-1 */
+      .div1 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+      .div1 li {
+        list-style: none;
+        color: var(--font-clr1);
+      }
+      .div1 ul:first-child {
+        background-color: var(--secondary);
+        padding: 3px 5px;
+        margin-bottom: 7px;
+        border-radius: 5px;
+        width: fit-content;
+      }
+      .div1 img {
+        width: 40px;
+        height: 40px;
+        padding: 20px;
+        background: linear-gradient(0, var(--raisin-black)30%, var(--primary)) ;
+        border: 2px solid var(--font-clr3);
+        border-radius: 10px;
+        box-shadow: 0 5px 7px rgba(0, 0, 0, 0.3);
+
+      }
+
+      .div-txt {
+        font-weight: 700;
+        color: var(--font-clr1);
+      }
+      /* DIVE-2 */
+      .div2 {
+        display: flex;
+        gap: 10px;
+        border-bottom: 1px solid var(--font-clr3);
+      }
+      .div2 a {
+        height: 2rem;
+        text-decoration: none;
+        color: var(--font-clr2);
+      }
+      .div2 a:nth-child(1) {
+        color: var(--accent2);
+        border-bottom: 3px solid;
+      }
+      .div2 a:nth-child(2):hover {
+        color: var(--font-clr1);
+      }
+      p {
+        color: var(--font-clr1);
+      }
+      h3 {
+        color: var(--font-clr1);
+        margin-bottom: 10px;
+      }
+
+      /* DIVE-3 */
+      .div3 {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+      }
+      .div3 .subdiv1 {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 10px;
+        border: 2px solid var(--font-clr3);
+        border-radius: 7px;
+        background-color: var(--raisin-black);
+      }
+        .div3 .subdiv1:hover {
+            background-color: var(--primary);
+            border: 2px solid var(--accent1);
+        }
+      .div3 p{
+        overflow: hidden;
+      }
+      .div3 img {
+        width: 20px;
+        height: 20px;
+      }
+      .div3 button {
+        display: flex;
+        background-color: var(--accent2);
+        color: var(--font-clr1);
+        border: 2px solid var(--accent2);
+        border-radius: 7px;
+        height: fit-content;
+        padding: 10px;
+        gap: 3px;
+        font-weight: 500;
+        transition: 100ms ease-in-out all;
+      }
+
+      .div3 button:hover{
+        background-color: var(--accent1);
+        border: 2px solid var(--accent1);
+        scale: .95;
+      }
+      .div-txts p:nth-child(1) {
+        color: var(--font-clr2);
+      }
+      .div-txts p:nth-child(2) {
+        color: var(--font-clr2);
+        font-size: 12px;
+      }
+
+      /* Code Div */
+
+      div .code-div {
+        background-color: var(--raisin-black);
+        display: flex;
+        align-items: center;
+        height: fit-content;
+        border-radius: 10px;
+        padding: 10px 10px;
+        gap: 10px;
+      }
+      .code-div p {
+        flex: 1;
+        font-size: 0.9rem;
+        color: var(--font-clr-mid);
+      }
+      .code-div img {
+        transform: rotate(90deg);
+        width: 20px;
+        height: fit-content;
+      }
+      .code-div button {
+        background-color: var(--raisin-black);
+        border: 2px solid var(--font-clr3);
+        border-radius: 5px;
+        padding: 5px;
+        transition: 100ms ease-in-out all;
+      }
+      .code-div button:hover{
+        background-color: var(--primary);
+        scale: .95;
+      }
+
+      /* Dive-4 */
+
+      .div4 {
+        display: flex;
+        gap: 10px;
+        padding: 10px 0;
+        font-size: 0.9rem;
+      }
+      .div4 img {
+        width: 15px;
+      }
+      .div4 p {
+        color: var(--font-clr2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="div1">
+        <img src="win-logo.svg" />
+        <li>
+          <ul>Agent</ul>
+          <ul>
+            <h3>Windows</h3>
+          </ul>
+        </li>
+      </div>
+
+      <h3 class="div-txt">Intallation</h3>
+
+      <div class="div2">
+        <a href="#">Chocoloatey</a>
+        <a href="#">Download</a>
+      </div>
+
+      <p>Install ngrok via Chocolatey with the following command:</p>
+
+      <div class="div3">
+        <div class="subdiv subdiv1">
+          <p>Download For Windows (64-Bit)</p>
+          <img src="/nav-arrow-down.svg" alt="" />
+        </div>
+        <button>
+          <img src="download.svg" alt="" />
+          <p>Download</p>
+        </button>
+      </div>
+
+      <h3>Configuration and run</h3>
+
+      <div class="div-txts">
+        <p>Add your authoken</p>
+        <p>
+          Don't have an authoken? <a href="#">Sign up</a> for a free account.
+        </p>
+      </div>
+
+      <div class="code-div">
+        <p>ngrok config add-authoken <span style="color: #40ff00;">&lt;</span>token<span style="color: #40ff00;">&gt;</span></p>
+        <button><img src="/copy.svg" alt="" /></button>
+      </div>
+
+      <p style="color: var(--font-clr2); font-size: 0.9rem">
+        Congratulation, you have an endpoint online!
+      </p>
+
+      <div class="div4">
+        <img src="info-circle.svg" />
+        <p>
+          You can run ngrok as a <a href="#">background service</a> on a Windows
+          machine.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
